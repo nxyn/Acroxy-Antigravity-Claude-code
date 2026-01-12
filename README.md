@@ -68,7 +68,7 @@ ACROXY exposes an Anthropic-compatible API at `http://localhost:8080`.
 ## 🤝 Credits
 
 **Infused Arts Team**
-- **Badri Narayanan** - Lead Developer
+- **Kirthan Ganesh / Nxyn** - Lead Developer /Owner Of Infused Arts
 
 ---
 <div align="center">
