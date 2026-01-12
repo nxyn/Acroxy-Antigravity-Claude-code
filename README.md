@@ -27,35 +27,24 @@
 
 ## 📥 Installation
 
-### Method 1: The Easy Way (Windows Installer) -> Recommended 🌟
-1. Download the latest `ACROXY Setup 1.2.6.exe` from the [Releases](https://github.com/badri-s2001/antigravity-claude-proxy/releases) page.
-2. Run the installer.
-3. Check **"Install Claude Code CLI"** if you haven't installed it yet (requires Node.js).
-4. Launch **ACROXY** from your desktop.
-
-### Method 2: For Developers (NPM)
-```bash
-npm install -g antigravity-claude-proxy@latest
-antigravity-claude-proxy start
-```
+1. **Download**: Get the latest `ACROXY Setup.exe` from the [Releases](https://github.com/nxyn/Acroxy-Antigravity-Claude-code/releases) page.
+2. **Install**: Run the installer.
+   - *Optional*: Check **"Install Claude Code CLI"** during setup if you don't have it yet.
+3. **Open**: Launch **ACROXY** from your desktop shortcut.
 
 ## 🚀 Usage
 
-### 1. Start ACROXY
-Launch the application. You'll see the **ACROXY Control Panel** and the **Dashboard** will open automatically.
+### 1. Launch & Connect
+Open the **ACROXY** app. It will automatically start the local proxy server.
+- Click **"Access Dashboard"** to view your status.
+- Go to the **Accounts** tab to link your Google Account(s).
 
-### 2. Connect Accounts
-- Click **"Access Dashboard"** in the app.
-- Go to the **Accounts** tab.
-- Click **Add Account** to link your Google Accounts (supports multiple for higher limits).
-
-### 3. Run Claude Code!
-Open your terminal and run:
+### 2. Start Coding
+Once ACROXY is running, simply open your terminal and type:
 ```bash
 claude
-# or if you used the manual setup
-antigravity-claude-proxy start
 ```
+That's it! ACROXY handles the connection to Google's Gemini models automatically.
 
 ## ⚙️ Configuration
 
