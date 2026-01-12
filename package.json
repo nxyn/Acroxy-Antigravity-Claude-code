@@ -2,7 +2,7 @@
   "name": "antigravity-claude-proxy",
   "version": "1.2.6",
   "description": "Proxy server to use Antigravity's Claude models with Claude Code CLI",
-  "main": "src/index.js",
+  "main": "main.js",
   "type": "module",
   "bin": {
     "antigravity-claude-proxy": "bin/cli.js"
@@ -10,7 +10,9 @@
   "files": [
     "src",
     "bin",
-    "public"
+    "public",
+    "main.js",
+    "preload.js"
   ],
   "scripts": {
     "build:css": "tailwindcss -i ./public/css/src/input.css -o ./public/css/style.css --minify",
@@ -19,6 +21,11 @@
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
     "dev:full": "concurrently \"npm run watch:css\" \"npm run dev\"",
+    "ui:dev": "cd electron-ui && npm run dev",
+    "ui:build": "cd electron-ui && npm run build",
+    "electron:start": "electron .",
+    "electron:dev": "concurrently \"npm run ui:dev\" \"electron . --dev\"",
+    "electron:build": "npm run ui:build && electron-builder --win",
     "accounts": "node src/cli/accounts.js",
     "accounts:add": "node src/cli/accounts.js add",
     "accounts:list": "node src/cli/accounts.js list",
@@ -47,11 +54,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/badri-s2001/antigravity-claude-proxy.git"
+    "url": "https://github.com/nxyn/Acroxy-Antigravity-Claude-code"
   },
-  "homepage": "https://github.com/badri-s2001/antigravity-claude-proxy#readme",
+  "homepage": "https://github.com/nxyn/Acroxy-Antigravity-Claude-code#readme",
   "bugs": {
-    "url": "https://github.com/badri-s2001/antigravity-claude-proxy/issues"
+    "url": "https://github.com/nxyn/Acroxy-Antigravity-Claude-code/issues"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -67,7 +74,34 @@
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
     "daisyui": "^4.12.14",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.4.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"
+  },
+  "build": {
+    "appId": "com.infusedarts.acroxy",
+    "productName": "ACROXY",
+    "files": [
+      "src/**/*",
+      "public/**/*",
+      "electron-ui/dist/**/*",
+      "main.js",
+      "preload.js",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/images/acroxy-icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "include": "installer/installer.nsh"
+    },
+    "directories": {
+      "output": "dist"
+    }
   }
 }
