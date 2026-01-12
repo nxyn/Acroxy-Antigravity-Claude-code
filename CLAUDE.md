@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Antigravity Claude Proxy is a Node.js proxy server that exposes an Anthropic-compatible API backed by Antigravity's Cloud Code service. It enables using Claude models (`claude-sonnet-4-5-thinking`, `claude-opus-4-5-thinking`) and Gemini models (`gemini-3-flash`, `gemini-3-pro-low`, `gemini-3-pro-high`) with Claude Code CLI.
+ACROXY is a Node.js proxy server that exposes an Anthropic-compatible API backed by Antigravity's Cloud Code service. It enables using Claude models (`claude-sonnet-4-5-thinking`, `claude-opus-4-5-thinking`) and Gemini models (`gemini-3-flash`, `gemini-3-pro-low`, `gemini-3-pro-high`) with Claude Code CLI.
 
 The proxy translates requests from Anthropic Messages API format → Google Generative AI format → Antigravity Cloud Code API, then converts responses back to Anthropic format with full thinking/streaming support.
 
@@ -175,7 +175,8 @@ public/
 - Model-specific rate limiting via `account.modelRateLimits[modelId]`
 - Automatic switch only when rate-limited for > 2 minutes on the current model
 - Session ID derived from first user message hash for cache continuity
-- Account state persisted to `~/.config/antigravity-proxy/accounts.json`
+- Account state persisted to `~/.config/acroxy/accounts.json`
+[![Star History Chart](https://api.star-history.com/svg?repos=nxyn/Acroxy-Antigravity-Claude-code&type=date&legend=top-left&cache-control=no-cache)](https://www.star-history.com/#nxyn/Acroxy-Antigravity-Claude-code&type=date&legend=top-left)
 
 **Account Data Model:**
 Each account object in `accounts.json` contains:
