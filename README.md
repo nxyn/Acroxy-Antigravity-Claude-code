@@ -57,7 +57,7 @@ ACROXY exposes an Anthropic-compatible API at `http://localhost:8080`.
 ## 🤝 Credits
 
 **Infused Arts Team**
-- **Badri Narayanan** - Lead Developer
+- **nxyn** - Lead Developer
 
 ---
 <div align="center">
