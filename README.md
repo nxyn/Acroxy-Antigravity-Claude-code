@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![ACROXY Banner](public/images/claude-code.png)
-
 ### Claude Code Free! Powered by Infused Arts
 **The Premium Proxy for Anthropic's Claude Code CLI**
 
